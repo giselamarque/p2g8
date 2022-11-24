@@ -10,7 +10,7 @@
         </button>
         <div class='dropdown-content'>
             <a href = '#'>Logout</a>
-            <a href = '#'>Profile</a>
+            <a href = '/views/layouts/main.handlebars'>Main Page</a>
         </div>
     </div>
 </header>
@@ -30,4 +30,8 @@
         
     </section>
 </div>
+{{/if}}
+
+{{#if loggedIn}}
+<script src=""></script>
 {{/if}}
