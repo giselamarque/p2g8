@@ -32,6 +32,7 @@ header {
 }
 
 .form-content header {
+    display: flex;
     flex-wrap: wrap;
     font-size: 28px;
     font-weight: bold;
