@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -8,6 +9,13 @@ body {
     align-items: center;
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: inline;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .form-content {
@@ -26,6 +34,7 @@ body {
 .form-content header {
     flex-wrap: wrap;
     font-size: 28px;
+    font-weight: bold;
     text-align: center;
     justify-content: center;
     border: 10px;
@@ -62,6 +71,10 @@ button {
     background-color: #2c5129;
     font-size: 18px;
     color: #ffffff;
+}
+
+button:hover {
+    background-color: #72b16d;
 }
 
 .form-link {
