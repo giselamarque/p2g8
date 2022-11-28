@@ -19,6 +19,8 @@ To put the application to work, a user needs to install MySQL2, Express, Express
 
 ## Usage
 
+<img width="1349" alt="Screen Shot 2022-11-28 at 4 03 07 PM" src="https://user-images.githubusercontent.com/110875368/204391060-7cc6d513-f653-419a-87bd-244536a65e03.png">
+
 The user needs to create a profile in order to contribute to the application. Once the profile is created through the login, they can use all the functions for posting and interacting.
 
 ## Credits
