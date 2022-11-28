@@ -3,12 +3,12 @@
   <h2>
     Here you can edit your post!
   </h2>
-  <form class="edit-post-form">
+  <form>
     <div>
       <input name="post-title" type="text" value="{{post.title}}" />
     </div>
     <div>
-      Created by you on {{post.created_at}}
+      Created on {{post.created_at}}
       |
       <a href="/post/{{post.id}}">{{post.comments.length}} {{"comment" post.comments.length}}</a>
     </div>

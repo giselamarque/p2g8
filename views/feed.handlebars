@@ -9,13 +9,14 @@
     <button type="submit" class="btn">Create</button>
   </form>
 </section>
-<!--Display feed-->
+<!--Display post-->
 <h3>Feed</h1>
 <ol>
-    {{#each post as |post| }}
+    {{#each post }}
     <li>
         {{> post-data post}}
         <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
     </li>
     {{#/each}}
 </ol>
+<script src="../public/javascript/add-post.js"></script>
