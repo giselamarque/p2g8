@@ -4,7 +4,7 @@ This application is a is a user based social space where the user can communicat
 
 ## Description
 
-Our motivation to create this was to make a safe space for any user to let everyone know their interest in literature in an efficient matter in the simplest way possible.
+Our motivation to create this was to make a safe space for any user to let everyone know their interest in literature in an efficient manner in the simplest way possible.
 
 ## Table of Contents
 
