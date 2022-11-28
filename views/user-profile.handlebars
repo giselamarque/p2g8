@@ -1,0 +1,37 @@
+{{#if loggedin}}
+<header>
+    <div class="website-title">
+        title
+    </div>
+
+    <div>
+        <button class='drpbtn'>
+             Drop Down
+        </button>
+        <div class='dropdown-content'>
+            <a href = '#'>Logout</a>
+            <a href = '/views/layouts/main.handlebars'>Main Page</a>
+        </div>
+    </div>
+</header>
+
+<div>
+    <section class="profile-wrapper">
+
+       <!-- Profile handlebar goes here -->
+
+    </section>
+   
+
+    <section class="feed-wrapper">
+    
+        <h3>Feed</h3>
+        <!--Feed handlebar.js goes here-->
+        
+    </section>
+</div>
+{{/if}}
+
+{{#if loggedIn}}
+<script src=""></script>
+{{/if}}

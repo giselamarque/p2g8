@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS book_worm;
+
+CREATE DATABASE book_worm;
