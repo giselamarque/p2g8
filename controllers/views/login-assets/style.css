@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -8,6 +9,21 @@ body {
     align-items: center;
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: inline;
+    top: 0;
+    padding: 20px 35px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #2c5129;
+    color:#ffffff
+}
+
+header a {
+    color: #f1e8d1;
 }
 
 .form-content {
@@ -19,19 +35,21 @@ body {
     padding: 0 25px 10px 25px;
     margin: 12px;
     margin-top: 10px;
-    justify-content: space-between;
-
+    justify-content: space-between
 }
 
 .form-content header {
+    display: flex;
     flex-wrap: wrap;
     font-size: 28px;
+    font-weight: bold;
     text-align: center;
     justify-content: center;
     border: 10px;
     padding: 20px 10px;
     margin-top: 25px;
     color: #2c5129;
+    background-color: #f1e8d1;
 
 }
 
@@ -62,6 +80,10 @@ button {
     background-color: #2c5129;
     font-size: 18px;
     color: #ffffff;
+}
+
+button:hover {
+    background-color: #72b16d;
 }
 
 .form-link {
