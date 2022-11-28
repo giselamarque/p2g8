@@ -15,18 +15,21 @@
     </div>
 </header>
 
+
 <div>
     <section class="profile-wrapper">
 
        <!-- Profile handlebar goes here -->
+       <h3>{{user.username}}</h3>
+       <h4>{{user.email}}</h4>
 
     </section>
    
 
     <section class="feed-wrapper">
     
-        <h3>Feed</h3>
         <!--Feed handlebar.js goes here-->
+        {{> feed }}
         
     </section>
 </div>
