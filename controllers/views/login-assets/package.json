@@ -1,0 +1,8 @@
+{
+    "name": "p2g8",
+    "description": "book forum/database",
+    "authors": "bw,vm,gm,ne,ds",
+    "version": "1.0.0",
+    "main": "login.html",
+    "dependencies": {}
+}
