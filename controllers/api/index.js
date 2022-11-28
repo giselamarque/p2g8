@@ -1,7 +1,16 @@
-const router = require('express').Router();
+function bookSearch() {
+    var search = document.getElementById('search').value
+    document.getElementById('results').innerHTML = ""
+    console.log(search)
 
-const userRoutes = require('./user-routes');
+    $.ajax( {
+        url: "https://www.googleapis.com/books/v1/volumes?q=" + search ,
+        dataType: "json" ,
 
-router.use('/users', userRoutes);
-
-module.exports = router;
+        success: function(data) {
+            console.log(data)
+        } ,
+        typr: 'GET'
+    }) ;
+}
+document.getElementById('button').addEventListener('click', booksearch, false)
