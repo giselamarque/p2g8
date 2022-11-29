@@ -18,6 +18,14 @@ Post.init(
             type: DataTypes.STRING,
             allowNull: false
         },
+         author: {
+            type: DataTypes.STRING,
+            allowNull: false
+          },
+          isbn: {
+            type: DataTypes.STRING,
+            allowNull: false
+          },
         user_id: {
           type: DataTypes.INTEGER,
             references:{

@@ -31,20 +31,18 @@ User.init(
         password: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: {
-                len: [4]
-            }
+           
         }
     },
     {
         hooks: {
             async beforeCreate(newUserInfo) {
-                newUserInfo.password = await bycrypt.hasd(newUserInfo, 10);
+                newUserInfo.password = await bycrypt.hash(newUserInfo.toString(), 10);
                 return newUserInfo;
             },
             
                 async beforeUpdate(updatedUserInfo) {
-                    updatedUserInfo.password = await bycrypt.hash(updatedUserInfo.password, 10);
+                    updatedUserInfo.password = await bycrypt.hash(updatedUserInfo.password.toString(), 10);
                     return updatedUserInfo;
                 }
         },

@@ -9,23 +9,7 @@
     <link rel="stylesheet"link href="./login-assets/style.css">
 </head>
 <body>
-    <header>
-        <h1>Bookworm</h1>
-        <nav>
-            <ul>
-                <li>
-                    <a href=#home>Home</a>
-                </li>
-                <li>
-                    <a href=#dashboard>Dashboard</a>
-                </li>
-                <li>
-                    <a href=#profile>My Profile</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-        <section class="container-forms">
+<section class="container-forms">
             <div class="form-login">
                 <div class="form-content">
                     <!--header-->
@@ -33,11 +17,11 @@
                     <!--login inputs-->
                     <form action="#">
                         <div class="field input">
-                            <input type="email" placeholder="username or email" class="input">
+                            <input type="email" placeholder="username or email" class="email-input">
                         </div>
 
                         <div class="field input">
-                            <input type="password" placeholder="password" class="input">
+                            <input type="password" placeholder="password" class="pw-input">
                             <!--good idea to have 'hide pw icon'-->
                         </div>
 
@@ -45,7 +29,7 @@
                             <a href="#" class="forgot-pw">Forgot Password?</a>
                         </div>
 
-                        <div class="btn">
+                        <div class="login-btn">
                             <button>Log in</button>
                         </div>
                     
@@ -57,13 +41,13 @@
                     <form class="form-hidden" id="sign-up">
                         <header>Sign up</header>
                         <div class="field input">
-                            <input type="text" placeholder="username" class="input">
+                            <input type="text" placeholder="username" class="input" id="username-signup">
                         </div>
                         <div class="field input">
-                            <input type="text" placeholder="email" class="input">
+                            <input type="text" placeholder="email" class="input" id="email-signup">
                         </div>
                         <div class="field input">
-                            <input type="text" placeholder="create a password" class="input">
+                            <input type="text" placeholder="create a password" class="input" id="password-signup">
                         </div>
 
                         <div class="signup-btn">

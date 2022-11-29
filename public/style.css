@@ -59,6 +59,10 @@ a {
     flex-wrap: wrap ;
 }
 
+a:hover {
+    color: #72b16d;
+}
+
 #top-books {
     background-color: #f1e8d1 ;
     padding: 25px ;
@@ -128,4 +132,14 @@ h5 {
     padding: 10px ;
     text-align: center ;
     flex-wrap: wrap ;
+}
+
+span a {
+    font-size: 18px;
+    color: #2c5129
+}
+
+main {
+    background-color: #2c5129;
+
 }

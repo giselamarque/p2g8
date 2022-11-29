@@ -4,32 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Book Worm</title>
-    <link rel="stylesheet" href="./public/style.css">
+    <link rel="stylesheet" href="../../public/style.css">
 </head>
 
 <body>
     <header>
         <h1>Book Worm</h1>
             <section id="links">
-                <a href="#">HomePage</a>
-                <a href="#">Profile</a>
-                <a href="#">Login</a>
+                <a href="../">HomePage</a>
+                <a href="../profile">Profile</a>
+                <a href="../login">Login</a>
             
     </header>
     
     <main>
-        <section id="top-books">
-            <h2>Top Books!</h2>
-        </section>
-        
-        <section id="books">
-            <!--books go here-->
-            <input id="search" type="text" placeholder="Search..">
-            <button id="button" type="button">Enter</button>
-            <div id="results"></div>
-            <img src="" alt="" />
-        </section>
+        {{{body}}}
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="../../public/javascript/books.js"></script>
+        <script src="../../controllers/home-routes.js"></script>
     </main>
 </body>
