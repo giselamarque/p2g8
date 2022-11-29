@@ -3,17 +3,18 @@ const sequelize = require('../config/connection');
 const { Post, User, Comment} = require('../models');
 const withAuth = require('../utils/auth');
 
-// get all posts for dashboard
+
 router.get('/', withAuth, (req, res) => {
   console.log(req.session);
   console.log('======================');
   Post.findAll({
     where: {
-      user_id: req.session.user_id
+        user_id: req.session.user_id
     },
     attributes: [
       'id',
-      'post_url',
+      'author',
+      'isbn',
       'title',
       'created_at',
     ],
@@ -70,8 +71,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
         const post = dbPostData.get({ plain: true });
         
         res.render('edit-post', {
-          post,
-          loggedIn: true
+          post
         });
       } else {
         res.status(404).end();
@@ -82,4 +82,4 @@ router.get('/edit/:id', withAuth, (req, res) => {
     });
 });
 
-module.exports = router;
+module.exports = router

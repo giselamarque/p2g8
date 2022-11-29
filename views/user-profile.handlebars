@@ -1,47 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bookworm [vm part for login/signup]</title>
-    <link rel="stylesheet"link href="./login-assets/style.css">
-</head>
-{{#if loggedin}}
-<header>
+<section>
+  <h2>Create New Post</h2>
+
+  <form class="new-post-form">
     <div>
-       <h1>Book Worm</h1> 
+      <label for="post-title">Title</label>
+      <input type="text" id="post-title" name="post-title" />
     </div>
+    <button type="submit" class="btn">Create</button>
+  </form>
+</section>
 
-    <div>
-        <button class='drpbtn'>
-             Drop Down
-        </button>
-        <div class='dropdown-content'>
-            <button id="logout">Logout</button>
-            <a href = '/views/layouts/main.handlebars'>Main Page</a>
-        </div>
-    </div>
-</header>
-
-
-<div>
-    <section class="profile-wrapper">
-
-       <!-- Profile handlebar goes here -->
-       <h3>{{user.username}}</h3>
-       <h4>{{user.email}}</h4>
-
-    </section>
-   
-
-    <section class="feed-wrapper">
-    
-        <!--Feed handlebar.js goes here-->
-        {{ feed }}
-        
-    </section>
-</div>
-<script src="../public/javascript/logout.js"></script>
-<script src="../public/javascript/logout.js"></script>
+{{#if posts.length}}
+<section>
+  <h2>Your Posts</h2>
+  <ol>
+    {{#each posts as |post|}}
+    <li>
+      {{> post-info post}}
+      <a href="/profile/edit/{{post.id}}" class="edit-link">Edit post</a>
+    </li>
+    {{/each}}
+  </ol>
+</section>
 {{/if}}
