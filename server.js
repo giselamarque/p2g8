@@ -14,9 +14,9 @@ const sess = {
     store: new SequelizeStore({
       db: sequelize
     })
-  };
+};
   
-  app.use(session(sess));
+app.use(session(sess));
 
 const hbs = exphbs.create({});
 const PORT = process.env.PORT || 3008;
