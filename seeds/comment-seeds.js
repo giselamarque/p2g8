@@ -199,3 +199,5 @@ const commentData = [
     },
 
 ];
+const seedComments = () => Comment.bulkCreate(commentData);
+modile.exports = seedComments;

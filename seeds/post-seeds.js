@@ -99,5 +99,5 @@ const postData = [
     },
 ];
 
-const seedPost  = () => User.bulkCreate(postData, {individualHooks: true});
+const seedPost  = () => Post.bulkCreate(postData);
 module.exports = seedPost;
