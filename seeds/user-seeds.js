@@ -1,46 +1,46 @@
 const sequelize = require('../config/connection');
-const {User} = require('../models');
+const {User, Post} = require('../models');
 
 const userData = [
     {
-        username: 'sleepeeHallow',
+        username: 'sleepeeHallow56',
         email: 'yoyo@gmail.com',
-        password:"1234asd"
+        password:"12345678asd"
     },
     {
         username: 'manman34',
         email:'lazyeye@rsdf.com',
-        password: 'asdfsdff3434'
+        password: 'asdfsdff3434321'
     },
     {
-        username:'goku',
+        username:'goku95',
         email:'darnit@ymakd.com',
-        password:'jibouv7780,'
+        password:'jibouv774567'
     },
     {
-        username:'johndoe',
+        username:'johndoe87',
         email:'Defarealemail@madeup.com',
-        password:'sodlhfp374'
+        password:'sodlhfp3744567'
     },
     {
-        username:'shrek',
+        username:'shrek456',
         email:'shrekandfiona@swamp.com',
-        password:'onions'
+        password:'onions1234567'
     },
     {
         username:'cablelarry',
         email:'bluecollar@rustic.org',
-        password:'sdfh3843'
+        password:'sdfh3843122345'
     },
     {
-        username:'Morty_281',
+        username:'Morty281',
         email:'evilmorty@ahhgees.com',
-        password:'hsdfe323'
+        password:'hsdfe32312345'
     },
     {
         username:'ScarySully',
         email:'screamking@monsters.inc',
-        password:'boo!321'
+        password:'boo32145678'
     }
 
 ];
