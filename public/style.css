@@ -72,10 +72,13 @@ h2 {
     color: #2c5129 ;
 }
 
+.search {
+text-align: center;
+}
+
 .search input {
-    align-items: flex-start;
    height: 40px ;
-   width: 20%;
+   width: 30%;
     background-color: #ffffff ;
     color: #2c5129 ;
     border-radius: 10px ;
