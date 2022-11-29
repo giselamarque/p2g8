@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f1e8d1;
+}
+
+/* header styles */
+
+header {
+    background-color: #2c5129 ;
+    padding: 30px ;
+    flex-wrap: wrap ;
+}
+
+header h1 {
+    color: #f1e8d1;
+    font-weight: bolder;
+}
+
+header a {
+    color: #f1e8d1;
+    font-weight: lighter;
+}
+
+header nav {
+    margin: 7px 0;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+header nav ul li a {
+    padding: 25px 15px 10px 15px;
+}
+
+h1 {
+    font-size: 50px ;
+    text-align: center ;
+    color: #f1e8d1 ;
+    flex-wrap: wrap ;
+}
+
+a {
+    font-size: 25px ;
+    text-decoration: none ;
+    padding: 10px ;
+    float: right ;
+    color: #2c5129 ;
+    flex-wrap: wrap ;
+}
+
+#top-books {
+    background-color: #f1e8d1 ;
+    padding: 25px ;
+    flex-wrap: wrap ;
+}
+
+h2 {
+    text-align: center ;
+    font-size: 35px ;
+    flex-wrap: wrap ;
+    color: #2c5129 ;
+}
+
+.search {
+text-align: center;
+}
+
+.search input {
+   height: 40px ;
+   width: 30%;
+    background-color: #ffffff ;
+    color: #2c5129 ;
+    border-radius: 10px ;
+    border: 1px #f1e8d1 solid;
+    font-size: 20px ;
+    flex-wrap: wrap ;
+    padding: 10px  ;
+    margin-top: 20px ;
+}
+
+#button {
+    height: 40px ;
+    width: 10% ;
+    padding-top: 4px ;
+    background-color: #2c5129 ;
+    color: #f1e8d1 ;
+    border-color: #f1e8d1 ;
+    border-radius: 10px;
+    font-size: 17px ;
+    size: 10px ;
+    flex-wrap: wrap ;
+}
+
+#results {
+    background-color: #f1e8d1 ;
+    flex-wrap: wrap ;
+}
+
+h3 {
+    font-size: 30px ;
+    padding: 20px ;
+    border: #f1e8d1 ;
+    text-align: center ;
+    flex-wrap: wrap ;
+}
+
+h4 {
+    font-size: 25px ;
+    padding: 10px ;
+    text-align: center ;
+    flex-wrap: wrap ;
+}
+
+h5 {
+    font-size: 20px ;
+    padding: 10px ;
+    text-align: center ;
+    flex-wrap: wrap ;
+}

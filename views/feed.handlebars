@@ -1,0 +1,22 @@
+<section>
+  <h2>Create New Post</h2>
+<!--Create new Post-->
+  <form class="create-post">
+    <div>
+      <label for="new-post-title">Title</label>
+      <input type="text" id="post-title" name="post-title" />
+    </div>
+    <button type="submit" class="btn">Create</button>
+  </form>
+</section>
+<!--Display post-->
+<h3>Feed</h1>
+<ol>
+    {{#each post }}
+    <li>
+        {{> post-data post}}
+        <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+    </li>
+    {{#/each}}
+</ol>
+<script src="../public/javascript/add-post.js"></script>

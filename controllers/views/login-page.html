@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookworm [vm part for login/signup]</title>
-    <link rel="stylesheet"link href="./login-assets/style.css">
+    <link href="login-assets/login-style.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -13,64 +13,70 @@
         <nav>
             <ul>
                 <li>
-                    <a href=#home>Home</a>
+                    <a href="main.html">home</a>
                 </li>
                 <li>
-                    <a href=#dashboard>Dashboard</a>
+                    <a href="./dashboard.html">dashboard</a>
                 </li>
                 <li>
-                    <a href=#profile>My Profile</a>
+                    <a href="#">my profile</a>
                 </li>
             </ul>
         </nav>
     </header>
-        <section class="container-forms">
-            <div class="form-login">
-                <div class="form-content">
+    <section class="container-forms">
+        <div class="form-login">
+            <div class="form-content">
                     <!--header-->
-                    <header>login</header>
-                    <!--login inputs-->
-                    <form action="#">
-                        <div class="field input">
-                            <input type="email" placeholder="username or email" class="input">
-                        </div>
+                <header>login</header>
+                <!--login inputs-->
+                <form action="#">
+                    <div class="field input">
+                        <input type="email" placeholder="username or email" class="input">
+                    </div>
 
-                        <div class="field input">
-                            <input type="password" placeholder="password" class="input">
-                            <!--good idea to have 'hide pw icon'-->
-                        </div>
-
-                        <div class="form-link">
-                            <a href="#" class="forgot-pw">Forgot Password?</a>
-                        </div>
-
-                        <div class="btn">
-                            <button>Log in</button>
-                        </div>
+                    <div class="field input">
+                        <input type="password" placeholder="password" class="input">
+                        <!--good idea to have 'hide pw icon'-->
+                    </div>
                     
-                        <div class="form-link">
-                            <span>Don't Have an Account? <a href="#" class="sign-up">sign up!</a></span>
-                        </div>
-                    </form>
+                     <div class="form-link">
+                        <a href="#" class="forgot-pw">forgot your password?</a>
+                    </div>
+
+                    <div class="btn">
+                        <button>log in</button>
+                    </div>
+                    
+                    <div class="form-link">
+                        <span>don't have an account? <a href="#" class="sign-up">sign up!</a></span>
+                    </div>
+                </form>
                     <!--create account/sign-up-->
-                    <form class="form-hidden" id="sign-up">
-                        <header>Sign up</header>
-                        <div class="field input">
-                            <input type="text" placeholder="username" class="input">
-                        </div>
-                        <div class="field input">
-                            <input type="text" placeholder="email" class="input">
-                        </div>
-                        <div class="field input">
-                            <input type="text" placeholder="create a password" class="input">
-                        </div>
+                <form class="form-hidden" id="sign-up">
+                    <header>sign up</header>
 
-                        <div class="signup-btn">
-                            <button>Create Account</button>
-                        </div>
+                    <div class="field input">
+                        <input type="text" placeholder="username" class="input">
+                    </div>
 
+                    <div class="field input">
+                        <input type="text" placeholder="email" class="input">
+                    </div>
+                    
+                    <div class="field input">
+                        <input type="text" placeholder="create a password" class="input">
+                    </div>
+
+                    <div class="signup-btn">
+                        <button>create account</button>
+                    </div>
 
                     </form>
+                </div>
+                <div class="call-to-signup">
+                    <h1>get inspired!</h1>
+                    <p>books are portals into vastly different worlds and schools of thought!</p>
                 </div>
             </div>
         </section>

@@ -4,32 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Book Worm</title>
-    <link rel="stylesheet" href="./public/style.css">
+    <link rel="stylesheet" href="/public/style.css">
 </head>
 
 <body>
     <header>
-        <h1>Book Worm</h1>
-            <section id="links">
-                <a href="#">HomePage</a>
-                <a href="#">Profile</a>
-                <a href="#">Login</a>
-            
+        <h1>bookworm</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">home</a>
+                </li>
+                <li>
+                    <a href="./dashboard.html">dashboard</a>
+                </li>
+                <li>
+                    <a href="./login-page.html">my profile</a>
+                </li>                
+            </ul>
+        </nav>
     </header>
     
     <main>
         <section id="top-books">
-            <h2>Top Books!</h2>
+            <h2>Search for any book!</h2>
+            <div class="search">
+                <input id="search" type="text" placeholder="enter a book title...">
+                <button id="button" type="button">Enter</button>
+            </div>
         </section>
-        
-        <section id="books">
-            <!--books go here-->
-            <input id="search" type="text" placeholder="Search..">
-            <button id="button" type="button">Enter</button>
-            <div id="results"></div>
-            <img src="" alt="" />
-        </section>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="./api/index.js"></script>
+        <div id="results">
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+            <script src="./api/index.js"></script>
+        </div>    
     </main>
 </body>

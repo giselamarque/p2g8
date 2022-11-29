@@ -10,8 +10,12 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+<<<<<<< HEAD
     "start": "server.js"
 >>>>>>> 33677d548fe1f99a9075c7abc9432bb623eb6327
+=======
+    "start": " node server.js"
+>>>>>>> bb88bcba1c76708239f5e0855e0b15a167fd4700
   },
   "repository": {
     "type": "git",
@@ -37,6 +41,7 @@
     "express-session": "^1.17.3",
     "handlebars": "^4.7.7",
     "mysql2": "^2.3.3",
+    "node": "^19.1.0",
     "sequelize": "^6.25.8"
 >>>>>>> 33677d548fe1f99a9075c7abc9432bb623eb6327
   }

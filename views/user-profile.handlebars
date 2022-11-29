@@ -1,7 +1,7 @@
 {{#if loggedin}}
 <header>
-    <div class="website-title">
-        title
+    <div>
+       <h1>Book Worm</h1> 
     </div>
 
     <div>
@@ -9,29 +9,30 @@
              Drop Down
         </button>
         <div class='dropdown-content'>
-            <a href = '#'>Logout</a>
+            <button id="logout">Logout</button>
             <a href = '/views/layouts/main.handlebars'>Main Page</a>
         </div>
     </div>
 </header>
 
+
 <div>
     <section class="profile-wrapper">
 
        <!-- Profile handlebar goes here -->
+       <h3>{{user.username}}</h3>
+       <h4>{{user.email}}</h4>
 
     </section>
    
 
     <section class="feed-wrapper">
     
-        <h3>Feed</h3>
         <!--Feed handlebar.js goes here-->
+        {{ feed }}
         
     </section>
 </div>
-{{/if}}
-
-{{#if loggedIn}}
-<script src=""></script>
+<script src="../public/javascript/logout.js"></script>
+<script src="../public/javascript/logout.js"></script>
 {{/if}}
