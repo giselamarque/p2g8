@@ -1,10 +1,15 @@
+const { createRequire } = require('express');
+
 const router = require('express').Router();
 const { User, Post, Comment} = require('../../models');
 
+createRequire
+
 // get all users
-router.get('/', (req, res) => {
+router.get('/', (res) => {
   User.findAll({
     attributes: { exclude: ['password'] }
+
   })
     .then(dbUserData => res.json(dbUserData))
     .catch(err => {

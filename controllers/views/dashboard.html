@@ -27,8 +27,43 @@
     
     <main>
         <div class="dashboard-container">
+            <div>
+                <section class="profile-wrapper">
+                  
+                     <li>
+                        <a href="login-page.html">my profile</a>
+                    </li>
             
+                </section>
+               
+                <section class="feed-wrapper">
+                <section>
+                    <h2>create a new post</h2>
+                    <!--Create new Post-->
+                        <form class="create-post">
+                        <div>
+                            <label for="new-post-title">title:</label>
+                            <input type="text" id="post-title" name="post-title" />
+                        </div>
+                        <button type="submit" class="btn">Create</button>
+                        </form>
+                </section>
+                <div class="display-post">
+                    <h3>feed</h1>
+                    <ol>
+                        <li>Harry Potter</li>
+                        <h4>post by supernerd934</h4>
+                        <p> omg bro why snape such a simp literally let it go dawg </p>
+                        <p> also dumbledore sus </p>
+
+                        <li> </li>
+                    </ol>
+                </div>
+                    
+                </section>
+            </div>
         </div>
     </main>
+    <script src="./api/user-routes.js"></script>
 </body>
 </html>

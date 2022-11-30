@@ -66,6 +66,16 @@ form {
     margin-top: 25px;
 }
 
+.form-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#sign-up {
+    opacity: 1;
+    pointer-events: none;
+}
+
 .form-content {
     max-width: 500px;
     height: auto;
