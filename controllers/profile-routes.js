@@ -4,13 +4,10 @@ const { Post, User, Comment} = require('../models');
 const withAuth = require('../utils/auth');
 
 
-router.get('/', withAuth, (req, res) => {
+router.get('/', (req, res) => {
   console.log(req.session);
   console.log('======================');
   Post.findAll({
-    where: {
-        user_id: req.session.user_id
-    },
     attributes: [
       'id',
       'author',
@@ -43,13 +40,13 @@ router.get('/', withAuth, (req, res) => {
     });
 });
 
-router.get('/edit/:id', withAuth, (req, res) => {
+router.get('/edit/:id', (req, res) => {
   Post.findByPk(req.params.id, {
     attributes: [
       'id',
-      'post_url',
+      'author',
+      'isbn',
       'title',
-      'created_at',
     ],
     include: [
       {
@@ -81,5 +78,9 @@ router.get('/edit/:id', withAuth, (req, res) => {
       res.status(500).json(err);
     });
 });
+
+router.get('/login', (req,res) => {
+  res.render('login')
+})
 
 module.exports = router
