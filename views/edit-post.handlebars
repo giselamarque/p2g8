@@ -1,29 +1,29 @@
-<article>
+<article id="top-books">
   <a href="/profile"> Back to Profile</a>
   <h2>
     Here you can edit your post!
   </h2>
-  <form>
-    <div>
-      <input name="post-title" type="text" value="{{post.title}}" />
+  <form class="search">
+    <div id="results">
+      <input class="search" name="post-title" type="text" value="{{post.title}}" />
     </div>
     <div>
       Created on {{post.created_at}}
       |
       <a href="/post/{{post.id}}">{{post.comment.length}}</a>
     </div>
-    <button type="submit">Save post</button>
-    <button type="button" class="delete-post-btn">Delete post</button>
+    <button id="button"  type="submit">Save post</button>
+    <button type="button" id="button" class="delete-post-btn">Delete post</button>
   </form>
 </article>
 
-<form class="comment-form">
+<form class="search">
   <div>
-    <textarea name="comment-body"></textarea>
+    <input class="search" type="text"></textarea>
   </div>
 
   <div>
-    <button type="submit">add comment</button>
+    <button class="button"  type="submit">add comment</button>
   </div>
 </form>
 
