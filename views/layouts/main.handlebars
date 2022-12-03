@@ -10,7 +10,7 @@
 
 <body>
     
-    <header>
+    <header class="form-content">
         <h1>Book Worm</h1>
             <section id="links">
                 {{#if loggedIn}}
@@ -20,7 +20,7 @@
                 {{else}}
                 <a href="../">HomePage</a>
                 <a href="../profile">Profile</a>
-                <button id="logout">Logout</button>
+                <button class="button" id="logout">Logout</button>
                 {{/if}}
     </header>
     
@@ -28,9 +28,7 @@
         {{{body}}}
         
     </main>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="../../controllers/home-routes.js"></script>
-    <script src="/javascript/logout.js"></script>
+    <script src="javascript/logout.js"></script>
 </body>
 
 </html>

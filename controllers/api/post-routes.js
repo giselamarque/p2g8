@@ -42,7 +42,8 @@ router.get('/:id', (req, res) => {
     },
     attributes: [
       'id',
-      'post_url',
+      'author',
+      'isbn',
       'title',
     ],
     include: [

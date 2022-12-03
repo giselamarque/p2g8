@@ -5,10 +5,10 @@ async function logout() {
     });
   
     if (response.ok) {
-      document.location.replace('/');
+      document.location.replace('/homepage');
     } else {
       alert(response.statusText);
     }
   }
   
-  document.querySelector('#logout').addEventListener('submit', logout);
+  document.querySelector('#logout').addEventListener('click', logout);
