@@ -8,6 +8,7 @@ router.get('/', (req, res) => {
   console.log(req.session);
   console.log('======================');
   Post.findAll({
+  
     attributes: [
       'id',
       'author',
@@ -32,7 +33,7 @@ router.get('/', (req, res) => {
   })
     .then(dbPostData => {
       const posts = dbPostData.map(post => post.get({ plain: true }));
-      res.render('user-profile', { posts, loggedIn: true });
+      res.render('user-profile', { posts, loggedIn: req.session.loggedIn});
     })
     .catch(err => {
       console.log(err);
