@@ -3,18 +3,19 @@
             <h2>search for any book!</h2>
             <div class="search">
                 <input id="search-input" type="text" placeholder="enter a book title...">
-                <button class="button" id="search-btn" type="submit">Enter</button>
+                <button class="button" id="search-btn" type="submit">Search</button>
             </div>
 
             <h2>top books:</h2>
 
         </section>
         <div id="search-results">
-           <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-           <script src="/javascript/books.js"></script>
+           
         </div>
        
 </form>
+
+ <script src="javascript/books.js"></script>
 
 <ol id="results" >
   {{#each posts as |post|}}

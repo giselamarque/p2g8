@@ -3,7 +3,7 @@
   <h2>
     Here you can edit your post!
   </h2>
-  <form class="search">
+  <form id="edit-post-form" class="search">
     <div id="results">
       <input class="search" name="post-title" type="text" value="{{post.title}}" />
     </div>
@@ -13,7 +13,7 @@
       <a href="/post/{{post.id}}">{{post.comment.length}}</a>
     </div>
     <button id="button"  type="submit">Save post</button>
-    <button type="button" id="button" class="delete-post-btn">Delete post</button>
+    <button type="submit" id="button" class="delete-post-btn">Delete post</button>
   </form>
 </article>
 
@@ -31,6 +31,6 @@
 {{> comments post.comments}}
 </div>
 
-<script src="javascript/edit-post.js"></script>
-<script src="javascript/delete-post.js"></script>
+<script src="/javascript/edit-post.js"></script>
+<script src="/javascript/delete-post.js"></script>
 <script src="/javascript/comment.js"></script>
