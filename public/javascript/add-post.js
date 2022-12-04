@@ -1,9 +1,9 @@
 async function newFormHandler(event) {
     event.preventDefault();
   
-    const title = document.querySelector('#post-title').value.trim();
-    const author = document.querySelector('#post-author').value.trim();
-    const isbn = document.querySelector("#post-isbn").value.trim();
+    const title = document.querySelector('#post-title').value
+    const author = document.querySelector('#post-author').value
+    const isbn = document.querySelector("#post-isbn").value
   
     const response = await fetch(`/api/posts`, {
       method: 'POST',
@@ -18,11 +18,11 @@ async function newFormHandler(event) {
     });
   
     if (response.ok) {
-      document.location.replace('/user-profile');
+      document.location.replace('/');
     } else {
       alert(response.statusText);
     }
   }
   
-  document.querySelector('.create-post-btn').addEventListener('submit', newFormHandler);
+  document.querySelector('#new-post-form').addEventListener('submit', newFormHandler);
   

@@ -1,6 +1,6 @@
 function bookSearch() {
-    var search = document.getElementById('search').value
-    document.getElementById('results').innerHTML = ""
+    var search = document.getElementById('search-input').value;
+    document.getElementById('search-results').innerHTML=" "
     console.log(search)
 
     $.ajax({
@@ -19,4 +19,4 @@ function bookSearch() {
       });
     }
 
-document.getElementById('search-btn').addEventListener('submit', bookSearch, false)
+document.querySelector('.book-search-form').addEventListener('submit', bookSearch, false)

@@ -13,17 +13,25 @@
     <header class="form-content">
         <h1>Book Worm</h1>
             <section id="links">
+                {{#if loggedIn }}
+                <a href="../">HomePage</a>
+                <a href="../profile">Profile</a>
+                <button class="button" id="logout" type="submit">Logout</button>
+                {{else}}
                 <a href="../">HomePage</a>
                 <a href="../profile">Profile</a>
                 <a href="../login">Login</a>
-                
+                {{/if}}
+            </section>
     </header>
     
     <main>
         {{{body}}}
         
     </main>
-    <script src="javascript/logout.js"></script>
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
 </body>
 
 </html>
