@@ -19,7 +19,7 @@ const sess = {
 app.use(session(sess));
 
 const hbs = exphbs.create({});
-const PORT = process.env.PORT || 3008;
+const PORT = process.env.PORT || 3009;
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
