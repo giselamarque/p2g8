@@ -4,13 +4,11 @@ const { Post, User, Comment} = require('../models');
 const withAuth = require('../utils/auth');
 
 
-router.get('/', withAuth, (req, res) => {
+router.get('/', (req, res) => {
   console.log(req.session);
   console.log('======================');
   Post.findAll({
-    where: {
-        user_id: req.session.user_id
-    },
+  
     attributes: [
       'id',
       'author',
@@ -35,7 +33,7 @@ router.get('/', withAuth, (req, res) => {
   })
     .then(dbPostData => {
       const posts = dbPostData.map(post => post.get({ plain: true }));
-      res.render('user-profile', { posts, loggedIn: true });
+      res.render('user-profile', { posts, loggedIn: req.session.loggedIn});
     })
     .catch(err => {
       console.log(err);
@@ -43,13 +41,13 @@ router.get('/', withAuth, (req, res) => {
     });
 });
 
-router.get('/edit/:id', withAuth, (req, res) => {
+router.get('/edit/:id', (req, res) => {
   Post.findByPk(req.params.id, {
     attributes: [
       'id',
-      'post_url',
+      'author',
+      'isbn',
       'title',
-      'created_at',
     ],
     include: [
       {
@@ -81,5 +79,13 @@ router.get('/edit/:id', withAuth, (req, res) => {
       res.status(500).json(err);
     });
 });
+
+router.get('/login', (req,res) => {
+  res.render('login')
+})
+
+router.get('/profile', (req,res) => {
+  res.render('user-profile')
+})
 
 module.exports = router

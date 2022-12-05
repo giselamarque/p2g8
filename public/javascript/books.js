@@ -1,46 +1,34 @@
-function bookSearch() {
-    var search = document.getElementById('search').value
-    document.getElementById('results').innerHTML = ""
-    console.log(search)
+async function bookSearch(event) {
+    var search = document.getElementById('search-input').value
+   var results = document.getElementById('search-results').innerHTML = ""
+    c
 
-    $.ajax({
-        dataType: 'json',
-        url: 'https://www.googleapis.com/books/v1/volumes?q=:' + search ,
-
-        success: function(data) {
+    var apiUrl='https://www.googleapis.com/books/v1/volumes?q=:' + search ;
+    await fetch(apiUrl)
+        .then(respone => {
+            respone.json()
+        }) 
+        .then(data => {
+            console.log('its doing something 🤷🏾‍♂️')
             for (i = 0; i < data.items.length; i++) {
-                results.innerHTML += "<h2>" + data.items[i].volumeInfo.title + "</h2>"
+                var titleEl = document.createElement("h3") 
+                var authorEl = document.createElement("h4")
+                var descriptionEl = document.createElement("h5")
+
+                titleEl.innerHTML =  data.items[i].volumeInfo.title
+                authorEl.innerHTML = data.items[i].volumeInfo.authors[0]
+                descriptionEl.innerHTML = data.items[i].volumeInfo.description
+
+                results.appendChild(titleEl);
+                results.appendChild(authorEl);
+                results.appendChild(descriptionEl);
             }
-        },
-
-        type: 'GET'
-      });
-
-      $.ajax({
-        dataType: 'json',
-        url: 'https://www.googleapis.com/books/v1/volumes?q=:' + search ,
-
-        success: function(data) {
-            for (i = 0; i < data.items.length; i++) {
-                results.innerHTML += "<h3>" + data.items[i].volumeInfo.authors[0] + "</h3>"
+            if(!data){
+                console.log("somehthing is wrong ")
             }
-        },
+        });
 
-        type: 'GET'
-      });
+}
 
-      $.ajax({
-        dataType: 'json',
-        url: 'https://www.googleapis.com/books/v1/volumes?q=:' + search ,
 
-        success: function(data) {
-            for (i = 0; i < data.items.length; i++) {
-                results.innerHTML += "<img>" + data.items[i].volumeInfo.imageLinks.thumbnail + "</img>"
-            }
-        },
-
-        type: 'GET'
-      });
-    }
-
-document.getElementById('button').addEventListener('click', bookSearch, false)
+document.querySelector('.book-search-form').addEventListener('submit', bookSearch)

@@ -9,9 +9,9 @@ router.get('/', (req, res) => {
   Post.findAll({
     attributes: [
       'id',
-      'post_url',
+      'author',
+      'isbn',
       'title',
-      'created_at'
     ],
     include: [
       {
@@ -42,14 +42,14 @@ router.get('/:id', (req, res) => {
     },
     attributes: [
       'id',
-      'post_url',
+      'author',
+      'isbn',
       'title',
-      'created_at',
     ],
     include: [
       {
         model: Comment,
-        attributes: ['id', 'comment_text', 'post_id', 'user_id',],
+        attributes: ['id', 'comment_text', 'post_id', 'user_id'],
         include: {
           model: User,
           attributes: ['username']
@@ -74,11 +74,14 @@ router.get('/:id', (req, res) => {
     });
 });
 
-router.post('/', withAuth, (req, res) => {
+router.post('/', (req, res) => {
   
   Post.create({
     title: req.body.title,
+    author: req.body.author,
+    isbn: req.body.isbn,
     user_id: req.session.user_id
+
   })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {
@@ -88,7 +91,7 @@ router.post('/', withAuth, (req, res) => {
 });
 
 
-router.put('/:id', withAuth, (req, res) => {
+router.put('/:id', (req, res) => {
   Post.update(
     {
       title: req.body.title
@@ -112,7 +115,7 @@ router.put('/:id', withAuth, (req, res) => {
     });
 });
 
-router.delete('/:id', withAuth, (req, res) => {
+router.delete('/:id', (req, res) => {
   console.log('id', req.params.id);
   Post.destroy({
     where: {

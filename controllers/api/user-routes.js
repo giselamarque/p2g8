@@ -1,15 +1,10 @@
-const { createRequire } = require('express');
-
 const router = require('express').Router();
 const { User, Post, Comment} = require('../../models');
 
-createRequire
-
 // get all users
-router.get('/', (res) => {
+router.get('/', (req, res) => {
   User.findAll({
     attributes: { exclude: ['password'] }
-
   })
     .then(dbUserData => res.json(dbUserData))
     .catch(err => {
@@ -27,11 +22,11 @@ router.get('/:id', (req, res) => {
     include: [
       {
         model: Post,
-        attributes: ['id', 'title', 'created_at']
+        attributes: ['id', 'title']
       },
       {
         model: Comment,
-        attributes: ['id', 'comment_text', 'created_at'],
+        attributes: ['id', 'comment_text'],
         include: {
           model: Post,
           attributes: ['title']

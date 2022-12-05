@@ -1,7 +1,7 @@
 async function loginFormHandler(event) {
     event.preventDefault();
   
-    const email = document.querySelector('.email-input').value.trim();
+    const email = document.querySelector('.email-input').value;
     const password = document.querySelector('.pw-input').value.trim();
   
     if (email && password) {
@@ -48,6 +48,6 @@ async function loginFormHandler(event) {
     }
   }
   
-  document.querySelector('.login-btn').addEventListener('submit', loginFormHandler);
+  document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
   
-  document.querySelector('.signup-btn').addEventListener('submit', signupFormHandler);
+  document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
